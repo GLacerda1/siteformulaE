@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const FooterStyle = styled.footer`
-  background-color: var(--color-padrao3);
+  background-color: black;
   padding-top: 20px;
-  background-color: var(--color-padrao3);
 
   .footer_container {
     display: grid;
@@ -22,6 +21,9 @@ export const FooterStyle = styled.footer`
     width: 190px;
     padding: 5px;
   }
+  .footer_text p {
+    color: var(--color-padrao1);
+  }
 
   h3 {
     font-size: 20px;
@@ -36,7 +38,7 @@ export const FooterStyle = styled.footer`
 
   .footer_content a {
     text-decoration: none;
-    color: var(--color-padrao6);
+    color: var(--color-padrao1);
     transition: color 0.3s ease;
   }
 
@@ -85,7 +87,7 @@ export const FooterStyle = styled.footer`
   }
 
   .footer_bottom {
-    background: var(--color-padrao4);
+    background: var(--color-padrao1);
     text-align: center;
     padding: 5px 0;
     margin-top: 20px;

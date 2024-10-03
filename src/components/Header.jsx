@@ -6,18 +6,16 @@ import '../css/header.css'
 
 const Header =()=>{
     return (
-      <section className="barranav">
+      <section className="barranav" >
         <Navbar expand="lg" className="bg-body-tertiary">
-          <Container>
+          <Container className='ababa'>
             <Navbar.Brand href="#home" className="logosite">
-              React-Bootstrap
+              <Nav.Link href="/home">Fimtech</Nav.Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
-                <Nav.Link href="/home">Home</Nav.Link>
-                <Nav.Link href="/sobre">Sobre</Nav.Link>
-                <Nav.Link href="/formlua-e">Formula-E</Nav.Link>
+                <Nav.Link href="/sobre">Formula-E</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">

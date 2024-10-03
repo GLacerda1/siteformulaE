@@ -1,4 +1,173 @@
-.formulario {
-    margin: 30px;
-    margin-top: 100px;
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.main-content {
+    padding-top: 100px;
+    color: var(--color-padrao1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 100px;
+}
+
+.main-content h1,
+.main-content h2 {
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.main-content h1 {
+    color: var(--color-padrao6);
+    font-size: 60px;
+    grid-column: span 3;
+    text-align: center;
+    animation-delay: 0.1s;
+}
+
+.main-content h2 {
+    color: var(--color-padrao1);
+    font-size: 45px;
+    grid-column: span 3;
+    text-align: center;
+    animation-delay: 0.2s;
+}
+
+.card {
+    width: 550px;
+    height: 300px;
+    background-color: var(--color-padrao3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    perspective: 1000px;
+    border-width: 0px;
+    padding: 20px;
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.5s; }
+.card:nth-child(4) { animation-delay: 0.6s; }
+.card:nth-child(5) { animation-delay: 0.7s; }
+.card:nth-child(6) { animation-delay: 0.8s; }
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+}
+
+.card.hovered .card-inner {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: background-color 0.3s;
+    padding: 20px;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.front {
+    background-color: var(--color-padrao3);
+}
+
+.back {
+    background-color: var(--color-padrao6);
+    transform: rotateY(180deg);
+}
+
+.card.hovered .front {
+    opacity: 0;
+    background-color: var(--color-padrao8);
+}
+
+.card.hovered .back {
+    opacity: 1;
+}
+
+.titulo-imagens {
+    grid-column: span 3;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.titulo-imagens h2 {
+    color: var(--color-padrao6);
+    font-size: 45px;
+}
+
+.imagem-container {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.imagem-carros {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin: 20px;
+}
+
+.imagem-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 250px;
+    height: 400px;
+}
+
+.imagem-coluna h3 {
+    font-size: 30px;
+    color: var(--color-padrao6);
+    margin: 10px 0;
+}
+
+.imagem-coluna p {
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    max-width: 480px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -15,16 +15,17 @@ html{
 
 
 :root {
-    --color-padrao6: #11395C;
-    --color-padrao5: #1D598F;
-    --color-padrao4: #2580CF;
-    --color-padrao3: #2E9DFF;
-    --color-padrao2: #71BCFF;
+    --color-padrao6: #F23064;
+    --color-padrao5: #BF3B5E;
+    --color-padrao4: #8C8C8C;
+    --color-padrao3: #404040;
+    --color-padrao2: #262626;
     --color-padrao1: #FFFFFF;
 }
 
 body{
-    background-color: black;
+    background-color: var(--color-padrao3);
+
 }
 `;
 

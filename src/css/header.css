@@ -1,0 +1,23 @@
+.logosite {
+    font-size: 40px;
+    color: var(--color-padrao6);
+}
+.barranav {
+    background-color: var(--color-padrao1);
+    color: white;
+  }
+  
+.bg-body-tertiary {
+    background-color: var(--color-padrao2) !important;
+}
+  
+.navbar, .navbar-collapse, .navbar-nav .nav-link {
+    color: var(--color-padrao1);
+}
+
+.logosite:hover{
+    color: var(--color-padrao1);
+}
+:hover{
+    transition: 0.5s;
+}

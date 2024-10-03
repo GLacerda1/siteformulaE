@@ -41,12 +41,6 @@ const Footer = () => {
                     <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
                 </li>
             </ul>
-            <h3>Formas de pagamento</h3>
-            <ul>
-                <li>
-                    <a href=""></a>
-                </li>
-            </ul>
         </div>
     </section>
     <div className="footer_bottom">
