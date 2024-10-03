@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterStyle = styled.footer`
-  background-color: black;
+  background-color: var(--color-padrao2);
   padding-top: 20px;
 
   .footer_container {
@@ -111,4 +111,4 @@ export const FooterStyle = styled.footer`
       opacity: 0;
     }
   }
-`;
+`                   

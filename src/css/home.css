@@ -3,6 +3,7 @@
         transform: translateX(-100%);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -12,7 +13,8 @@
 .infoprojeto {
     padding: 30px;
     color: var(--color-padrao1);
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     animation: slideIn 0.5s ease-out;
 }
@@ -34,7 +36,34 @@
 .infoprojeto p {
     animation-delay: 0.6s;
 }
-/* Estilos existentes */
+
+.content-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.content-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.content-image img {
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.content-row.reverse {
+    display: flex;
+}
+
 .jumbotron {
     margin: 30px;
 }
@@ -55,27 +84,18 @@
     margin-top: 35px;
 }
 
-.infoprojeto {
-    padding: 30px;
-    color: var(--color-padrao1);
-    display: inline-block;
-    justify-content: space-evenly;
-    animation: slideIn 0.5s ease-out; /* Adiciona a animação de slide-in */
-}
-
-/* Animações */
 @keyframes slideIn {
     0% {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-/* Animação de fade para react-transition-group */
 .infoprojeto .fade-enter {
     opacity: 0;
     transform: translateY(20px);
@@ -98,7 +118,6 @@
     transition: opacity 500ms, transform 500ms;
 }
 
-/* Estilos para os títulos e parágrafos */
 .infoprojeto h1 {
     margin-bottom: 40px;
     margin-top: 30px;
@@ -111,11 +130,11 @@
 
 .infoprojeto p {
     margin-bottom: 40px;
-    animation: slideIn 0.5s ease-out forwards; /* Para cada elemento */
+    animation: slideIn 0.5s ease-out forwards;
 }
 
 .infoprojeto h1 {
-    animation-delay: 0.2s; /* Delays para cada elemento */
+    animation-delay: 0.2s;
 }
 
 .infoprojeto h2 {

@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../css/header.css'
+import logo from '../assets/logo.png'
 
 const Header =()=>{
     return (
@@ -10,7 +11,7 @@ const Header =()=>{
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container className='ababa'>
             <Navbar.Brand href="#home" className="logosite">
-              <Nav.Link href="/home">Fimtech</Nav.Link>
+              <Nav.Link href="/home"><img src={logo} alt="logo" className='logofimtech'/></Nav.Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

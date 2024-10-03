@@ -2,6 +2,12 @@
     font-size: 40px;
     color: var(--color-padrao6);
 }
+
+.logofimtech {
+    width: 125px;
+    height: 125                                                                                                                                         px;
+
+}
 .barranav {
     background-color: var(--color-padrao1);
     color: white;
