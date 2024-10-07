@@ -21,6 +21,7 @@ export const FooterStyle = styled.footer`
     width: 190px;
     padding: 5px;
   }
+
   .footer_text p {
     color: var(--color-padrao1);
   }
@@ -73,6 +74,12 @@ export const FooterStyle = styled.footer`
 
   .social_icons {
     text-align: center;
+    font-size:23px
+  }
+
+  .social_icons a {
+    margin-right: 10px;
+    align-items: center;
   }
 
   .social_icons i {
@@ -99,8 +106,25 @@ export const FooterStyle = styled.footer`
     font-size: 16px;
   }
 
-  input {
-    border-radius: 3px;
+  @media (max-width: 768px) {
+    .footer_container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+
+    .footer_content {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer_content {
+      margin: 5px 0;
+    }
+
+    .social_icons i {
+      font-size: 20px;
+    }
   }
 
   @keyframes fadeOut {
@@ -111,4 +135,4 @@ export const FooterStyle = styled.footer`
       opacity: 0;
     }
   }
-`                   
+`;

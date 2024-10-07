@@ -16,9 +16,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 20px;
-    justify-items: center;
-    justify-content: center;
-    align-content: center;
     margin-bottom: 100px;
 }
 
@@ -45,8 +42,9 @@
 }
 
 .card {
-    width: 550px;
-    height: 300px;
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
     background-color: var(--color-padrao3);
     color: white;
     display: flex;
@@ -56,10 +54,10 @@
     overflow: hidden;
     cursor: pointer;
     perspective: 1000px;
-    border-width: 0px;
     padding: 20px;
     animation: slideIn 0.5s ease forwards;
     opacity: 0;
+    transition: transform 0.3s;
 }
 
 .card:nth-child(1) { animation-delay: 0.3s; }
@@ -134,13 +132,17 @@
     justify-content: center;
     align-items: flex-start;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .imagem-carros {
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     object-fit: cover;
-    margin: 20px;
+    margin: 40px;
+    height: 700px;
+    max-height: 300px;
 }
 
 .imagem-coluna {
@@ -150,7 +152,7 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 250px;
-    height: 400px;
+    height: auto;
 }
 
 .imagem-coluna h3 {
@@ -170,4 +172,95 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 50px;
+    }
+
+    .main-content h2 {
+        font-size: 35px;
+    }
+
+    .card {
+        max-width: 400px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content h1 {
+        font-size: 40px;
+    }
+
+    .main-content h2 {
+        font-size: 30px;
+    }
+
+    .card {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card-inner {
+        transform: none;
+    }
+
+    .titulo-imagens h2 {
+        font-size: 35px;
+    }
+
+    .imagem-carros {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content h1 {
+        font-size: 30px;
+    }
+
+    .main-content h2 {
+        font-size: 25px;
+    }
+
+    .titulo-imagens h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card-inner {
+        height: 550px;
+    }
+
+    .front, .back {
+        font-size: 20px;
+    }
+
+    .imagem-coluna h3 {
+        font-size: 25px;
+    }
+
+    .imagem-coluna p {
+        font-size: 16px;
+    }
 }

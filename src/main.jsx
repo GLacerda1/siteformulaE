@@ -6,7 +6,7 @@ import Error from "./routes/Error.jsx";
 import Sobre from "./routes/Sobre.jsx";
 import GlobalStyle from "./css/GlobalStyle.jsx";
 import Home from './routes/Home.jsx';
-
+import Loja from './routes/Loja.jsx';
 
 
 
@@ -21,6 +21,7 @@ const router = createBrowserRouter([
     children: [
       { path: "sobre", element: <Sobre /> },
       { path: "home", element: <Home /> },
+      { path: "loja", element: <Loja />},
     ],
   },
 ]);

@@ -36,8 +36,6 @@ const Home = () => {
 
       <div className="infoprojeto">
         <h1>Sobre o projeto</h1>
-
-        {/* Imagem à esquerda, texto à direita */}
         <div className="content-row">
           <div className="content-image">
             <img src={views} alt="contextualizando" />
@@ -56,8 +54,6 @@ const Home = () => {
             </p>
           </div>
         </div>
-
-        {/* Imagem à direita, texto à esquerda */}
         <div className="content-row reverse">
           <div className="content-text">
             <h2>Solução</h2>

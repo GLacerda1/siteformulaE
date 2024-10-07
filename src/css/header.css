@@ -1,3 +1,9 @@
+.barranav {
+    background-color: var(--color-padrao1);
+    color: white;
+    margin-bottom: 20px;
+}
+
 .logosite {
     font-size: 40px;
     color: var(--color-padrao6);
@@ -5,25 +11,41 @@
 
 .logofimtech {
     width: 125px;
-    height: 125                                                                                                                                         px;
-
+    height: 125px;
 }
-.barranav {
-    background-color: var(--color-padrao1);
-    color: white;
-  }
-  
+
 .bg-body-tertiary {
     background-color: var(--color-padrao2) !important;
 }
-  
+
 .navbar, .navbar-collapse, .navbar-nav .nav-link {
     color: var(--color-padrao1);
 }
 
-.logosite:hover{
+.logosite:hover {
     color: var(--color-padrao1);
 }
-:hover{
+
+.navbar {
     transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    .logofimtech {
+        width: 120px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        margin-top: 10px;
+    }
 }
